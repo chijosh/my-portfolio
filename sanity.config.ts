@@ -8,7 +8,7 @@ const config = defineConfig({
   dataset: process.env.NEXT_PUBLIC_SANITY_PROJECT_DATASET as string,
   title: "Portfolio Website",
   apiVersion: process.env.NEXT_PUBLIC_SANITY_PROJECT_API_VERSION as string,
-  basePath: "/admin",
+  basePath: "/studio",
   plugins: isDev ? [structureTool(), visionTool()] : [structureTool()],
   schema: { types: schemas },
 });

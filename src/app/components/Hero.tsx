@@ -2,7 +2,7 @@
 
 import CustomBtn from "./UI/CustomBtn";
 import GradientTxt from "./UI/GradientTxt";
-import profImg from "../../../public/josh Image.jpeg";
+import profImg from "../../../public/josh image 2.jpeg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
