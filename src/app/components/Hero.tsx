@@ -6,7 +6,6 @@ import profImg from "../../../public/josh image 2.jpeg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-// import resume from "../../../public/Joshua Onyenwere Resume.pdf";
 
 export default function Hero() {
   const MotionImage = motion(Image);

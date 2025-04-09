@@ -3,9 +3,6 @@ import { structureTool } from "sanity/structure";
 import schemas from "./sanity/schemas";
 import { visionTool } from "@sanity/vision";
 
-// const projectId = process.env.SANITY_STUDIO_ID
-// const dataset = process.env.SANITY_STUDIO_DATASET
-
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
 const dataset = process.env.NEXT_PUBLIC_SANITY_PROJECT_DATASET
 
