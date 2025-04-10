@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 import GradientTxt from "./components/UI/GradientTxt";
 import Projects from "./components/Home/Projects/Projects";
 import AnimatedSlide from "./components/Home/Projects/Swiper";
+import OuterView from "./components/HeroViews";
 // import TechStacks from "./components/TechStacks";
 
 const Preloader = function () {
@@ -74,7 +75,7 @@ export default function ClientHome() {
           <Header key="header" />
           <main key="main">
             <div className="container mx-auto px-5 pt-5 lg:px-20">
-              <Hero />
+              <OuterView />
             </div>
             {/* <TechStacks /> */}
             <div className="container mx-auto px-5 pt-5 lg:px-20">

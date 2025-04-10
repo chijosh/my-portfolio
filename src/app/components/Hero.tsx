@@ -2,16 +2,18 @@
 
 import CustomBtn from "./UI/CustomBtn";
 import GradientTxt from "./UI/GradientTxt";
-import profImg from "../../../public/josh image 2.jpeg";
+import profImg from "../../../public/josh image 5.jpeg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Gooery from "./GooeryAnimation";
 
 export default function Hero() {
   const MotionImage = motion(Image);
 
   return (
     <section className="my-[80px] items-center gap-16 xl:flex">
+            <Gooery />
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
