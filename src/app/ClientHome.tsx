@@ -11,8 +11,7 @@ import Footer from "./components/Footer/Footer";
 import GradientTxt from "./components/UI/GradientTxt";
 import Projects from "./components/Home/Projects/Projects";
 import AnimatedSlide from "./components/Home/Projects/Swiper";
-import OuterView from "./components/HeroViews";
-// import TechStacks from "./components/TechStacks";
+import TechStacks from "./components/TechStacks";
 
 const Preloader = function () {
   return (
@@ -75,9 +74,8 @@ export default function ClientHome() {
           <Header key="header" />
           <main key="main">
             <div className="container mx-auto px-5 pt-5 lg:px-20">
-              <OuterView />
+              <Hero />
             </div>
-            {/* <TechStacks /> */}
             <div className="container mx-auto px-5 pt-5 lg:px-20">
               <Services />
               <Projects />
@@ -85,6 +83,7 @@ export default function ClientHome() {
             <div className="relative h-[400px]">
               <AnimatedSlide />
             </div>
+            <TechStacks />
             <OtherComponents />
           </main>
           <Footer key="footer" />

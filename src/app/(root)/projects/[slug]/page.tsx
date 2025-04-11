@@ -34,6 +34,9 @@ export default async function ProjectDetails({ params }: Params) {
   if (!project)
     toast.error("Error fetching project details, please try again later!");
 
+  console.log("project", project);
+  console.log("params", params);
+
   return (
     <section>
       <div className="container mx-auto px-5 pt-5 lg:px-20">
@@ -56,7 +59,22 @@ export default async function ProjectDetails({ params }: Params) {
             <p className="md:text-lg">{project.description}</p>
           </div>
         </div>
-        <Image src={gradientBG} alt="gradient background" priority />
+
+        <Link
+          href={project.liveUrl}
+          aria-label="Navigate to target page via image"
+        >
+          <div className="w-[80vw] h-[40vh] overflow-hidden mx-auto relative group">
+            <Image
+              src={project.image || gradientBG}
+              alt="gradient background"
+              loading="lazy"
+              width={1200}
+              height={800}
+              className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+            />
+          </div>
+        </Link>
         <div className="prose prose-lg prose-blue mx-auto max-w-[800px] pt-[100px] xl:prose-xl lg:pt-[160px]">
           <PortableText value={project?.content} />
         </div>

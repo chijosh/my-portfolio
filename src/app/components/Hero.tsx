@@ -9,11 +9,13 @@ import Link from "next/link";
 import Gooery from "./GooeryAnimation";
 
 export default function Hero() {
-  const MotionImage = motion(Image);
+  const MotionImage = motion.create(Image);
 
   return (
-    <section className="my-[80px] items-center gap-16 xl:flex">
+    <>
             <Gooery />
+
+    <section className="my-[80px] items-center gap-16 xl:flex">
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -64,5 +66,6 @@ export default function Hero() {
         priority
       />
     </section>
+    </>
   );
 }
