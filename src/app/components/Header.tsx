@@ -19,8 +19,8 @@ export default function Header() {
               href="/"
               className="text-[15px] font-medium italic sm:text-base md:text-[24px] lg:font-bold"
             >
-              {"<React"}
-              <GradientTxt tagName="span" txt="Mode />." />
+              {"<Chi"}
+              <GradientTxt tagName="span" txt="Josh />." />
             </Link>
             <svg
               onClick={() => setIsNavClicked(!isNavClicked)}
