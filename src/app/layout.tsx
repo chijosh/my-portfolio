@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_LIVE_URL as string),
   keywords: seoKeywords,
   title: {
-    default: "Home | <ChiJosh />",
+    default: "<ChiJosh />",
     template: "%s | <ChiJosh />",
   },
   description:
