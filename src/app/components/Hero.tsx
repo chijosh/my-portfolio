@@ -32,11 +32,11 @@ export default function Hero() {
         <div className="mb-16 flex flex-col gap-4 md:flex-row xl:items-center">
           <CustomBtn txt="Book a call" className="w-[150px]" href="/contact" />
           <Link
-            href="/Joshua Onyenwere Resume.pdf"
+            href="/Joshua_Onyenwere_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            download="Joshua_Onyenwere_Resume.pdf"
-            className="group flex cursor-pointer items-center gap-2 text-lg font-bold"
+            download="Joshua_Onyenwere_CV.pdf"
+            className="group flex cursor-pointer items-center gap-2 text-lg font-bold z-10"
           >
             <span>Download CV</span>
             <svg

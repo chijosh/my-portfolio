@@ -59,7 +59,7 @@ export default function TechStacks() {
           id="right-content"
           className="max-w-full overflow-hidden md:max-w-[50%]"
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {techStacks.map((tech, index) => (
               <FadeUp
                 key={index}
