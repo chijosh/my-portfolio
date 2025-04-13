@@ -3,7 +3,7 @@
 import Image from "next/image";
 import profImage from "../../../../../../public/josh image.jpeg";
 import profImage2 from "../../../../../../public/josh image 3.jpeg";
-import profImage3 from "../../../../../../public/josh image 4.JPG";
+import profImage3 from "../../../../../../public/josh image 4.jpeg";
 import profImage4 from "../../../../../../public/josh image 6.jpeg";
 import GradientTxt from "../../../UI/GradientTxt";
 import FadeUp from "@/animations/FadeUp";

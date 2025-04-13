@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { getTechStacks } from "../../../sanity/sanity-utils";
 import { toast } from "react-toastify";
