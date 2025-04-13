@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     images: [
       new URL("/opengraphImg.png", process.env.NEXT_PUBLIC_LIVE_URL as string)
         .href,
-    ], // image to be shown of website when linked to different sources
+    ],
   },
 };
 
