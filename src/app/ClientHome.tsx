@@ -73,10 +73,10 @@ export default function ClientHome() {
         <>
           <Header key="header" />
           <main key="main">
-            <div className="container mx-auto px-5 pt-5 lg:px-20">
+            <div className="container mx-auto px-5 pt-5 lg:px-20 dark:bg-gray-800 dark:text-white">
               <Hero />
             </div>
-            <div className="container mx-auto px-5 pt-5 lg:px-20">
+            <div className="container mx-auto px-5 pt-5 lg:px-20 dark:text-white">
               <Services />
               <Projects />
             </div>

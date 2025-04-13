@@ -2,16 +2,34 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import GradientTxt from "./UI/GradientTxt";
 import { usePathname } from "next/navigation";
+import { Moon, Sun } from "lucide-react";
+import { Button } from "./UI/Button";
 
 export default function Header() {
+  const [theme, setTheme] = useState<"light" | "dark">("light");
   const [isNavClicked, setIsNavClicked] = useState(false);
   const pathname = usePathname();
 
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.documentElement.classList.toggle("dark", savedTheme === "dark");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
+  };
+
   return (
-    <header className="relative">
+    <header className="relative dark:bg-black dark:text-white">
       <div className="container mx-auto px-5 pt-5 lg:px-20">
         <nav>
           <div className="flex items-center justify-between pb-3">
@@ -20,7 +38,7 @@ export default function Header() {
               className="text-[15px] font-medium italic sm:text-base md:text-[24px] lg:font-bold"
             >
               {"<Chi"}
-              <GradientTxt tagName="span" txt="Josh />." />
+              <GradientTxt tagName="span" txt="Josh />" />
             </Link>
             <svg
               onClick={() => setIsNavClicked(!isNavClicked)}
@@ -36,6 +54,19 @@ export default function Header() {
             </svg>
             {/* nav menu desktop */}
             <div className="hidden gap-6 font-medium lg:flex xl:gap-8">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={toggleTheme}
+                className="my-3 rounded-full transition-opacity duration-75"
+              >
+                {theme === "light" ? (
+                  <Moon className="h-5 w-5" />
+                ) : (
+                  <Sun className="h-5 w-5" />
+                )}
+                <span className="sr-only">Toggle theme</span>
+              </Button>
               <Link
                 href="/#about"
                 className="my-5 transition-opacity duration-75 hover:opacity-50"
@@ -90,9 +121,22 @@ export default function Header() {
               padding: isNavClicked ? "20px" : 0,
             }}
             transition={{ duration: 0.5 }}
-            className="absolute left-0 top-14 w-full overflow-hidden bg-white p-5 shadow-lg lg:hidden"
+            className="absolute left-0 top-14 w-full overflow-hidden bg-white p-5 shadow-lg lg:hidden dark:bg-black dark:text-white"
           >
             <div className="container mx-auto flex flex-col px-5 font-medium">
+            <Button
+                variant="ghost"
+                size="icon"
+                onClick={toggleTheme}
+                className="my-3 rounded-full transition-opacity duration-75"
+              >
+                {theme === "light" ? (
+                  <Moon className="h-5 w-5" />
+                ) : (
+                  <Sun className="h-5 w-5" />
+                )}
+                <span className="sr-only">Toggle theme</span>
+              </Button>
               <Link
                 href="/#about"
                 className="my-5 transition-opacity duration-75 hover:opacity-50"

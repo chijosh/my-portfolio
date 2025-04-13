@@ -11,12 +11,16 @@
   "dependencies": {
     "@next/env": "^15.2.5",
     "@portabletext/react": "^3.1.0",
+    "@radix-ui/react-slot": "^1.2.0",
     "@react-spring/web": "^9.7.5",
     "@sanity/icons": "^3.7.0",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.83.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "dotenv": "^16.4.7",
     "framer-motion": "^11.2.9",
+    "lucide-react": "^0.488.0",
     "next": "14.2.3",
     "next-sanity": "^9.9.9",
     "react": "^18",
@@ -28,6 +32,7 @@
     "sanity": "^3.83.0",
     "styled-components": "^6.1.17",
     "swiper": "^11.1.4",
+    "tailwind-merge": "^3.2.0",
     "use-dencrypt-effect": "^2.0.0"
   },
   "devDependencies": {

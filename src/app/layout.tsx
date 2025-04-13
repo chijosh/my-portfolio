@@ -33,7 +33,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/icon.png" sizes="32" />
       </head>
-      <body suppressHydrationWarning>
+      <body suppressHydrationWarning className="bg-[#f3f3f3] dark:bg-gray-800">
         {children}
         <ToastContainer />
       </body>
